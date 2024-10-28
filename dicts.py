@@ -33,6 +33,7 @@ def remove_item(inventario, articulo):
 def list_inventory(inventario):
 	lista=[]
 	for clave, valor in inventario.items():
-		tupla=clave, valor
-		lista.append(tupla)
+		if inventario[clave]>0:
+			tupla=clave, valor
+			lista.append(tupla)
 	return lista
